@@ -23,8 +23,6 @@ sudo apt install nvidia-driver-430
 # Windows/Other
 https://www.nvidia.com/Download/index.aspx
 ```
-<br/>
-
 ## Inference with pre-trained weights
 ### Convert pre-trained Darknet weights
 ```bash
@@ -43,11 +41,11 @@ python detect.py --weights ./checkpoints/yolov3.tf --image ./data/street.jpg
 # yolov3-tiny
 python detect.py --weights ./checkpoints/yolov3-tiny.tf --tiny --image ./data/street.jpg
 ```
-<br/>
-
 ## YOLOv3-tiny with Different Depths
 The repository "https://github.com/zzh8829/yolov3-tf2" built the original YOLOv3-tiny. We changed the depth of YOLOv3-tiny by duplicating and adding the first five _Convolutional_ modules (__Conv. Layer 1__ ∼ __Conv. Layer 5__) in Darknet-tiny (backbone of YOLOv3-tiny). The duplicated and added _Convolutional_ modules are placed next to the original _Convolutional_ module. In addition, we also limited the growth of the depth to 0 ∼ 3 layers. Based on the above rules, we can obtain 56 models through different combinations between __Conv. Layer 1__ ∼ __Conv. Layer 5__. You can find these modified models and the original model under the folder "./yolov3_tf2".
+
 We use the "XXXXX" five-digit code to distinguish modified YOLOv3-tiny models. From right to left, each coded digit corresponds to the module __Conv. Layer 5__ ∼ __Conv. Layer 1__. The number "X" on a certain digit means that we duplicated and added its corresponding _Convolutional_ module X times. For example, "10101" means that we duplicated and added __Conv. Layer 1__, __Conv. Layer 3__ and __Conv. Layer 5__ respectively, and each added _Convolutional_ module is placed next to the original _Convolutional_ module.  Further, "02010" means that we duplicated and added __Conv. Layer 2__ twice, __Conv. Layer 4__ once, and "00000" means that we did not modify the structure of YOLOv3-tiny, but will train it by ourselves without using the pre-trained weights.
+
 You can get a more detailed explanation in Section 4.3.1 of Paper "__Benchmarking Real-time Features of Deep Neural Network Inferences__".
 <br/>
 
