@@ -6,7 +6,7 @@ import os
 import cv2
 import json
 
-_IMAGE_PATH= '/home/yipeng_zhou/yolov3-tf2/data/coco/val2017'
+_IMAGE_PATH= '/home/yipeng_zhou/yolov3-tf2/data/coco2voc2tfrecord/val2017'
  
 _INDENT= ''*4
 _NEW_LINE= '\n'
@@ -18,7 +18,7 @@ _DIFFICULT= '0'
 _TRUNCATED= '0'
 _POSE= 'Unspecified'
 # 保存的目录
-_ANNOTATION_SAVE_PATH= '/home/yipeng_zhou/yolov3-tf2/data/coco/Annotations/val2017'
+_ANNOTATION_SAVE_PATH= '/home/yipeng_zhou/yolov3-tf2/data/coco2voc2tfrecord/Annotations/val2017'
  
 # 创建节点
 def createElementNode(doc,tag, attr):  # 创建一个元素节点
@@ -69,7 +69,7 @@ def writeXMLFile(doc,filename):
  
  
 if __name__ == '__main__':
-    img_path = '/home/yipeng_zhou/yolov3-tf2/data/coco/val2017/'
+    img_path = '/home/yipeng_zhou/yolov3-tf2/data/coco2voc2tfrecord/val2017/'
     fileList = os.listdir(img_path)
     if fileList == 0:
         os._exit(-1)

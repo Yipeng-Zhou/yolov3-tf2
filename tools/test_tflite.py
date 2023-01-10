@@ -14,7 +14,7 @@ from tensorflow.python.util import nest
 flags.DEFINE_string('model', './checkpoints/yolov3-tiny.tflite',
                     'path to saved_model')
 flags.DEFINE_string('classes', './data/coco.names', 'path to classes file')
-flags.DEFINE_string('image', './data/000000000139.jpg', 'path to input image')
+flags.DEFINE_string('image', './data/street.jpg', 'path to input image')
 flags.DEFINE_integer('num_classes', 80, 'number of classes in the model')
 flags.DEFINE_integer('size', 416, 'image size')
 

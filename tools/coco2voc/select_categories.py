@@ -1,7 +1,7 @@
 # coding=utf-8
 
 '''
-coco2017的数据集中label是1-90的，取coco的80类以及对应的标签
+coco2017的数据集中label是1-90的, 取coco的80类以及对应的标签
 output: coco_train.json or coco_val.json
 '''
 import json
@@ -35,7 +35,7 @@ inputfile = []
 inner = {}
 # write to json
 # modify the path, instances_train2017.json or instances_val2017.json
-with open('/home/yipeng_zhou/yolov3-tf2/data/coco/annotations/instances_val2017.json','r+') as f:
+with open('/home/yipeng_zhou/yolov3-tf2/data/coco2voc2tfrecord/annotations/instances_val2017.json','r+') as f:
     allData = json.load(f)
     data = allData['annotations']
     print('read ready')

@@ -26,7 +26,7 @@ for i in data:
 nameStr = set(nameStr)
 print(len(nameStr))
  
-path = '/home/yipeng_zhou/yolov3-tf2/data/coco/val2017/'
+path = '/home/yipeng_zhou/yolov3-tf2/data/coco2voc2tfrecord/val2017/'
  
 for file in os.listdir(path):
     if(file not in nameStr):
